@@ -1,0 +1,150 @@
+.section {
+  position: relative;
+  padding-top: 110px;
+
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 150px;
+    padding-bottom: 10px;
+
+    background-color: #0a68f3;
+  }
+}
+
+.contentWrapperMobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileTitle {
+  margin-bottom: 32px;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: var(--blue-text-color);
+
+  & .mobileTitleInside {
+    color: var(--primary-text-color);
+  }
+}
+
+.buttonWrapper {
+  margin-bottom: 26px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: auto;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contentWrapperDesktop {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  position: relative;
+
+  max-width: 44%;
+
+  z-index: 5;
+}
+
+.desktopTitle {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+
+  color: var(--white-text-color);
+
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+    font-size: clamp(
+      30px,
+      calc(30px + (58 - 30) * ((100vw - 768px) / (1440 - 768))),
+      58px
+    );
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 58px;
+  }
+}
+
+.desktopSubTitle {
+  margin-bottom: 52px;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: var(--white-text-color);
+}
+
+.circle {
+  position: relative;
+  width: clamp(261.82px, calc(100vw / 3), 550px);
+  height: clamp(261.82px, calc(100vw / 3), 550px);
+
+  background: url("../../images/icons/logo.svg"),
+    linear-gradient(135deg, #4791ff 0%, #004dc0 100%);
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+
+  z-index: 5;
+
+  @media screen and (min-width: 1440px) {
+    width: 550px;
+    height: 550px;
+  }
+}
+
+.wave {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 2;
+  }
+}
+
+.tiltedWave {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    transform: rotate(10deg);
+    z-index: 1;
+  }
+}

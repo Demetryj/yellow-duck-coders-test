@@ -1,0 +1,17 @@
+.button {
+  padding: 15px 42px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--white-text-color);
+  background-color: var(--blue-bg-color);
+
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 65px;
+    color: var(--blue-text-color);
+    background-color: var(--white-bg-color);
+  }
+}

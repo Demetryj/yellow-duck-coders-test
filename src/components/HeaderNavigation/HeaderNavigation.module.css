@@ -1,0 +1,20 @@
+.navigationList {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    gap: 52px;
+  }
+}
+
+.navigationLink {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: var(--white-text-color);
+}
